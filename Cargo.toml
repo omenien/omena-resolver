@@ -6,6 +6,9 @@ license = "MIT"
 description = "Omena resolver boundary over source-resolution contracts"
 repository = "https://github.com/omenien/omena-resolver"
 readme = "README.md"
+keywords = ["omena", "css-modules", "resolver", "analysis"]
+categories = ["development-tools"]
+exclude = [".github/**"]
 
 [lib]
 name = "omena_resolver"
@@ -22,5 +25,5 @@ expect_used = "warn"
 panic = "warn"
 
 [dependencies]
-engine-input-producers = { package = "omena-engine-input-producers", git = "https://github.com/omenien/omena-engine-input-producers.git", rev = "9e4d29c" }
+engine-input-producers = { package = "omena-engine-input-producers", version = "0.1.0" }
 serde = { version = "1.0", features = ["derive"] }
