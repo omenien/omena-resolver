@@ -1,16 +1,26 @@
 [package]
 name = "omena-resolver"
-version.workspace = true
-edition.workspace = true
-license.workspace = true
-publish.workspace = true
-description = "Omena resolver boundary over CME source-resolution producer contracts"
-repository = "https://github.com/yongsk0066/css-module-explainer"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Omena resolver boundary over source-resolution contracts"
+repository = "https://github.com/omenien/omena-resolver"
 readme = "README.md"
 
-[lints]
-workspace = true
+[lib]
+name = "omena_resolver"
+
+[lints.rust]
+unsafe_code = "deny"
+missing_docs = "allow"
+
+[lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"
 
 [dependencies]
-engine-input-producers = { path = "../engine-input-producers" }
-serde.workspace = true
+engine-input-producers = { package = "omena-engine-input-producers", git = "https://github.com/omenien/omena-engine-input-producers.git", rev = "9e4d29c" }
+serde = { version = "1.0", features = ["derive"] }
