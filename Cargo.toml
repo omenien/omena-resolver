@@ -1,6 +1,6 @@
 [package]
 name = "omena-resolver"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 license = "MIT"
 description = "Omena resolver boundary over source-resolution contracts"
@@ -25,5 +25,5 @@ expect_used = "warn"
 panic = "warn"
 
 [dependencies]
-engine-input-producers = { package = "omena-engine-input-producers", git = "https://github.com/omenien/omena-engine-input-producers.git", rev = "d954723" }
+engine-input-producers = { package = "omena-engine-input-producers", version = "0.1.4" }
 serde = { version = "1.0", features = ["derive"] }
